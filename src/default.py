@@ -112,6 +112,9 @@ class sypFTP(object):
   def log(self, msg):
     
     if msg:
+      try:
+        msg = unicode(msg, errors='ignore')
+      except: pass
       self.log_arr.append(u"%s\n" % (msg))
       
   """ Some debugging needs to be done """
