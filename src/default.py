@@ -1,4 +1,13 @@
-import appuifw, e32, e32dbm, globalui, btsocket, urllib, thread, re, os, ftpserver
+import appuifw
+import e32
+import e32dbm
+import globalui
+import btsocket
+import urllib
+import thread
+import re
+import os
+import ftpserver
 
 class sypFTP(object):
   
@@ -11,7 +20,7 @@ class sypFTP(object):
     
     """ Set app info """
     self.__NAME__     = u"sypFTP"
-    self.__VERSION__  = u"0.1.0"
+    self.__VERSION__  = u"0.1.1"
     self.__AUTHOR__   = u"Intars Students"
     self.__EMAIL__    = u"the.mobix@gmail.com"
     self.__URL__      = u"http://code.google.com/p/sypftp/"
@@ -20,7 +29,7 @@ class sypFTP(object):
     self.log_arr      = []
     self.ftpd_running = False
     self.ftpd_auto    = True
-    self.db           = u"%s\\options.db" % self.__APPDIR__
+    self.db           = u"%s\\0.1.1-options.db" % self.__APPDIR__
     
     """ Set default user options and load custom ones (if there is some) """
     self.default = {
