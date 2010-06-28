@@ -7,7 +7,15 @@ import urllib
 import thread
 import re
 import os
-import ftpserver
+
+""" Test if sypFTP is running it testing environment """
+try:
+  import ftpserver
+  
+except:
+  import sys
+  sys.path.append('E:\\data\\python\\')
+  import ftpserver
 
 class sypFTP(object):
   
